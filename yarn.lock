@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"-@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/-/-/--0.0.1.tgz#db6db7cd866142880dd03e5b8781d1b4fac0e5bd"
+  integrity sha512-3HfneK3DGAm05fpyj20sT3apkNcvPpCuccOThOPdzz8sY7GgQGe0l93XH9bt+YzibcTIgUAIMoyVJI740RtgyQ==
+
 "@aashutoshrathi/word-wrap@^1.2.3":
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz#bd9154aec9983f77b3a034ecaa015c2e4201f6cf"
@@ -2788,6 +2793,11 @@ hexoid@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/hexoid/-/hexoid-1.0.0.tgz#ad10c6573fb907de23d9ec63a711267d9dc9bc18"
   integrity sha512-QFLV0taWQOZtvIRIAdBChesmogZrtuXvVWsFHZTk2SU+anspqZ2vMnoLg7IE1+Uk16N19APic1BuF8bC8c2m5g==
+
+hl7-standard@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/hl7-standard/-/hl7-standard-1.0.4.tgz#b5858814e18d3b3af71844ee68366ee7d52d8a30"
+  integrity sha512-Dk8U0Q84HrQ5HCS3VXcay3ILrKOqQ1pprHHIxPaq/byi2zrTUwdP+tIv0sF+SI/l4bkET3EnN8yuGuQmOdHvuw==
 
 html-escaper@^2.0.0:
   version "2.0.2"
