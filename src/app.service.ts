@@ -1,9 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { readFileSync } from 'fs';
+import { readFileSync, readdirSync } from 'fs';
 import * as HL7 from 'hl7-standard';
 
 const MESSAGES_DIRECTORY_PATH = 'messages/';
-const MESSAGE_FILE_PATH = MESSAGES_DIRECTORY_PATH + '1.hl7';
 
 type Patient = {
   insNumber: string;
@@ -19,8 +18,15 @@ type Patient = {
 
 @Injectable()
 export class AppService {
-  getPatient(): Patient {
-    const rawData = readFileSync(MESSAGE_FILE_PATH, 'utf8');
+  getPatients(): Patient[] {
+    const fileArray = readdirSync(MESSAGES_DIRECTORY_PATH);
+    return fileArray.map((fileName) => {
+      return this.getPatientFromMessage(MESSAGES_DIRECTORY_PATH + fileName);
+    });
+  }
+
+  getPatientFromMessage(messagePath: string): Patient {
+    const rawData = readFileSync(messagePath, 'utf8');
     const message = new HL7(rawData);
     message.transform();
     return {
